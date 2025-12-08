@@ -7,17 +7,18 @@
 
 body {
   line-height: 1.6;
-  color: #333;
-  background-color: #f7f9fc;
+  color: #111;
+  background: linear-gradient(to bottom, #f0fff4, #ffffff); /* gradasi hijau muda ke putih */
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #1e3a8a;
-  color: #fff;
+  background: linear-gradient(to right, #0f172a, #1e293b); /* gradasi hitam kebiruan */
+  color: #d1fae5;
 }
 
 .logo {
@@ -30,14 +31,13 @@ body {
   font-size: 2rem;
   cursor: pointer;
 }
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #1e3a8a;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
+    background: linear-gradient(to bottom, #1f2937, #111827);
+    color: #f0fff4;
     position: absolute;
     top: 60px;
     right: 0;
@@ -52,7 +52,7 @@ body {
   }
 
   .nav-links a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 500;
   }
@@ -70,15 +70,16 @@ body {
   }
 
   .nav-links a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 500;
   }
 }
 
+/* Hero Section */
 .hero {
-  background: linear-gradient(to right, #1e3a8a, #3b82f6);
-  color: white;
+  background: linear-gradient(to right, #14532d, #16a34a); /* gradasi hijau gelap ke terang */
+  color: #ffffff;
   text-align: center;
   padding: 4rem 2rem;
 }
@@ -100,20 +101,29 @@ body {
 .btn {
   display: inline-block;
   padding: 0.7rem 1.5rem;
-  background-color: white;
-  color: #1e3a8a;
+  background: linear-gradient(to right, #1f2937, #111827); /* gradasi gelap */
+  color: #d1fae5;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  transition: background 0.3s ease;
 }
 
+.btn:hover {
+  background: linear-gradient(to right, #374151, #1f2937);
+}
+
+/* Section Umum */
 .about,
 .projects,
 .contact {
   padding: 3rem 2rem;
   text-align: center;
+  background-color: #ffffff;
+  color: #111;
 }
 
+/* Projects */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -122,15 +132,16 @@ body {
 }
 
 .project-card {
-  background-color: white;
+  background: linear-gradient(to top, #ecfdf5, #ffffff); /* putih ke hijau muda */
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer */
 footer {
-  background-color: #1e3a8a;
-  color: white;
+  background: linear-gradient(to right, #0f172a, #1e293b); /* gradasi gelap */
+  color: #d1fae5;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
