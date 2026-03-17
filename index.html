@@ -3,66 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio Hafid</title>
+
+    <title>Hapid Triansyah | Cloud Engineer</title>
+
     <link rel="stylesheet" href="style.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   </head>
+
   <body>
-    <header>
+    <div class="container">
       <nav class="navbar">
-        <h1 class="logo">Hafid Triansyah👋</h1>
-        <div class="hamburger" id="hamburger">&#9776;</div>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#about">Tentang</a></li>
-          <li><a href="#projects">Proyek</a></li>
-          <li><a href="#contact">Kontak</a></li>
+        <div class="logo">Portfolio</div>
+
+        <ul>
+          <li><a class="active" href="#">About</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a class="btn-nav" href="#">Get Started</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="hero">
-      <div class="hero-text">
-        <img src="https://media.licdn.com/dms/image/C5603AQGDoIRZRtC3Aw/profile-displayphoto-shrink_200_200/0/1619493470365?e=2147483647&v=beta&t=hzng6zB6-GH1EQ2nQ80WswefFv4MJNrK1wi2QygLn7k" alt="Foto in LinkeIn" />
-        <h2>Halo, saya Hapid Triansyah👋</h2>
-        <p>Calon Backend Developer & DevOps Enthusiast</p>
-        <a href="#contact" class="btn">Hubungi Saya</a>
-      </div>
-    </section>
+      <section class="hero">
+        <div class="hero-left">
+          <h4>Hello, I am</h4>
 
-    <section id="about" class="about">
-      <h2>Tentang Saya</h2>
-      <p>
-        Saya lulusan Teknik Elektro yang kini fokus belajar menjadi seorang Backend Developer dan DevOps. Saat ini saya sedang mengembangkan aplikasi manajemen warung makan menggunakan Spring Boot. Saya senang membangun sistem yang efisien
-        dan handal.
-      </p>
-    </section>
+          <h1>Hapid<br />Triansyah</h1>
 
-    <section id="projects" class="projects">
-      <h2>Proyek Saya</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>WMS (Warung Makan Samudra)</h3>
-          <p>Aplikasi manajemen cabang, produk, transaksi dan laporan penjualan berbasis REST API.</p>
+          <p>Cloud Engineer & AWS Certified Cloud Practitioner. Passionate about cloud infrastructure, automation, and building scalable systems.</p>
+
+          <div class="social"><i class="fab fa-github"></i> <i class="fab fa-linkedin"></i> <i class="fab fa-instagram"></i></div>
+
+          <div class="buttons"><button class="btn-red">Hire Me</button> <button class="btn-red">Portfolio</button></div>
         </div>
-        <div class="project-card">
-          <h3>Simulasi Jaringan</h3>
-          <p>Proyek simulasi jaringan komputer menggunakan Cisco Packet Tracer.</p>
+        <div class="hero-right">
+          <img src="profiles.png" alt="Hapid Triansyah">
         </div>
       </div>
     </section>
 
-    <section id="contact" class="contact">
-      <h2>Kontak</h2>
-      <p>Anda bisa menghubungi saya melalui:</p>
-      <ul>
-        <li>Email: hapid.triansyah@gmail.com</li>
-        <li>GitHub: <a href="https://github.com/Hafidtsh" target="_blank">github.com/Hafidtsh</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/hapid-triansyah-9a304520b" target="_blank">linkedin.com/in/hapid-triansyah</a></li>
-      </ul>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 Hafid. Dibuat dengan ❤️ dan semangat belajar.</p>
-    </footer>
+      <div class="circle big"></div>
+      <div class="circle small"></div>
+      <div class="circle tiny"></div>
+    </div>
   </body>
   <script>
     const hamburger = document.getElementById("hamburger");
