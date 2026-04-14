@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
@@ -6,56 +6,210 @@
 
     <title>Hapid Triansyah | Cloud Engineer</title>
 
-    <link rel="stylesheet" href="style.css" />
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background: #0f172a;
+        color: #fff;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background: #1e293b;
+        position: sticky;
+        top: 0;
+      }
+      .logo {
+        font-weight: 700;
+        font-size: larger;
+        color: #38bdf8;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+      }
+      .nav-links li {
+        margin-left: 20px;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: #fff;
+        transition: 0.3s;
+      }
+      .nav-links a:hover {
+        color: #38bdf8;
+      }
+
+      .hamburger {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 60px 10%;
+        flex-wrap: wrap;
+        animation: fadeIn 1s ease;
+      }
+
+      .hero-left {
+        max-width: 500px;
+      }
+      .hero-left h1 {
+        font-size: 2.8rem;
+      }
+      .hero-left p {
+        margin: 15px 0;
+        opacity: 0.8;
+      }
+
+      .social i {
+        margin-right: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .social i:hover {
+        color: #38bdf8;
+        transform: scale(1.2);
+      }
+
+      .buttons button {
+        margin-right: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      .btn-red {
+        background: #38bdf8;
+        color: #000;
+        transition: 0.3s;
+      }
+      .btn-red:hover {
+        transform: scale(1.05);
+        background: #0ea5e9;
+      }
+
+      .hero-right img {
+        width: 250px;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      /* MOBILE */
+      @media (max-width: 768px) {
+        .nav-links {
+          position: absolute;
+          top: 70px;
+          right: 0;
+          background: #1e293b;
+          width: 200px;
+          flex-direction: column;
+          display: none;
+          padding: 20px;
+        }
+        .nav-links.active {
+          display: flex;
+        }
+        .nav-links li {
+          margin: 10px 0;
+        }
+        .hamburger {
+          display: block;
+        }
+
+        .hero {
+          flex-direction: column;
+          text-align: center;
+        }
+        .hero-right {
+          margin-top: 30px;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <div class="container">
-      <nav class="navbar">
-        <div class="logo">Portfolio</div>
+    <nav class="navbar">
+      <div class="logo">Hapidtsh</div>
 
-        <ul>
-          <li><a class="active" href="#">About</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a class="btn-nav" href="#">Get Started</a></li>
-        </ul>
-      </nav>
-    </header>
+      <div class="hamburger" id="hamburger">☰</div>
 
-      <section class="hero">
-        <div class="hero-left">
-          <h4>Hello, I am</h4>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="btn-red">Get Started</a></li>
+      </ul>
+    </nav>
 
-          <h1>Hapid<br />Triansyah</h1>
+    <section class="hero">
+      <div class="hero-left">
+        <h4>Hello, I am</h4>
+        <h1>Hapid<br />Triansyah</h1>
 
-          <p>Cloud Engineer & AWS Certified Cloud Practitioner. Passionate about cloud infrastructure, automation, and building scalable systems.</p>
+        <p>Cloud Engineer & AWS Certified Cloud Practitioner. Fokus di automation, cloud infrastructure, dan scalable system.</p>
 
-          <div class="social"><i class="fab fa-github"></i> <i class="fab fa-linkedin"></i> <i class="fab fa-instagram"></i></div>
-
-          <div class="buttons"><button class="btn-red">Hire Me</button> <button class="btn-red">Portfolio</button></div>
+        <div class="social">
+          <i class="fab fa-github"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-instagram"></i>
         </div>
-        <div class="hero-right">
-          <img src="profiles.png" alt="Hapid Triansyah">
+
+        <div class="buttons">
+          <button class="btn-red">Hire Me</button>
+          <button class="btn-red">Portfolio</button>
         </div>
+      </div>
+
+      <div class="hero-right">
+        <img src="profile.png" alt="Hapid Triansyah" />
       </div>
     </section>
 
-      <div class="circle big"></div>
-      <div class="circle small"></div>
-      <div class="circle tiny"></div>
-    </div>
-  </body>
-  <script>
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("navLinks");
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const navLinks = document.getElementById("navLinks");
 
-    hamburger.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  </script>
+      hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
+  </body>
 </html>
