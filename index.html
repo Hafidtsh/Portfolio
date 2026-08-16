@@ -18,14 +18,16 @@
       <div class="hamburger" id="hamburger">☰</div>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-        <!-- <li><a href="#" class="btn-red">Get Started</a></li> -->
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Portfolio</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
-    <section class="hero">
+    <!-- HERO / ABOUT -->
+    <section class="hero" id="about">
       <div class="hero-left">
         <h4>Hello, I am</h4>
         <h1>Hapid<br />Triansyah</h1>
@@ -36,15 +38,17 @@
           <a href="https://github.com/Hafidtsh" target="_blank">
             <i class="fab fa-github"></i>
           </a>
-          <a href="www.linkedin.com/in/hapid-triansyah-9a304520b" target="_blank">
+          <a href="https://www.linkedin.com/in/hapid-triansyah-9a304520b" target="_blank">
             <i class="fab fa-linkedin"></i>
           </a>
-          <i class="fab fa-instagram"></i>
+          <a href="#" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
         </div>
 
         <div class="buttons">
           <button class="btn-red" onclick="downloadCV()">Hire Me</button>
-          <button class="btn-red">Portfolio</button>
+          <button class="btn-red" onclick="scrollToSection('projects')">Portfolio</button>
         </div>
       </div>
 
@@ -52,6 +56,182 @@
         <img src="profile.png" alt="Hapid Triansyah" />
       </div>
     </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <h2 class="section-title">Skills & Tech Stack</h2>
+      <p class="section-subtitle">Teknologi yang gua gunakan sehari-hari</p>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Cloud & DevOps</h3>
+          <div class="badges">
+            <span class="badge badge-aws"><i class="fab fa-aws"></i> AWS</span>
+            <span class="badge badge-docker"><i class="fab fa-docker"></i> Docker</span>
+            <span class="badge"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+            <span class="badge"><i class="fas fa-infinity"></i> CI/CD</span>
+            <span class="badge"><i class="fas fa-code-branch"></i> Terraform</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Programming</h3>
+          <div class="badges">
+            <span class="badge badge-python"><i class="fab fa-python"></i> Python</span>
+            <span class="badge badge-linux"><i class="fab fa-linux"></i> Bash/Shell</span>
+            <span class="badge"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="badge"><i class="fas fa-database"></i> SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3>Tools & Platform</h3>
+          <div class="badges">
+            <span class="badge badge-git"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="badge"><i class="fab fa-github"></i> GitHub</span>
+            <span class="badge"><i class="fas fa-server"></i> Nginx</span>
+            <span class="badge"><i class="fas fa-network-wired"></i> Networking</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section section-dark" id="projects">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle">Beberapa project yang pernah gua kerjain</p>
+
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-cloud"></i></div>
+          <h3>Cloud Infrastructure Automation</h3>
+          <p>Automasi provisioning infrastruktur AWS menggunakan Terraform & CI/CD pipeline dengan GitHub Actions.</p>
+          <div class="project-tags">
+            <span>AWS</span><span>Terraform</span><span>GitHub Actions</span>
+          </div>
+          <a href="https://github.com/Hafidtsh" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon"><i class="fab fa-docker"></i></div>
+          <h3>Containerized Web App</h3>
+          <p>Deploy web application menggunakan Docker & Kubernetes dengan load balancing dan auto-scaling.</p>
+          <div class="project-tags">
+            <span>Docker</span><span>Kubernetes</span><span>YAML</span>
+          </div>
+          <a href="https://github.com/Hafidtsh" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon"><i class="fas fa-user-circle"></i></div>
+          <h3>Portfolio Website</h3>
+          <p>Personal portfolio website dengan desain responsif, deployed menggunakan Docker container di cloud.</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Docker</span>
+          </div>
+          <a href="https://github.com/Hafidtsh" target="_blank" class="project-link">
+            <i class="fab fa-github"></i> View on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE / TIMELINE -->
+    <section class="section" id="experience">
+      <h2 class="section-title">Experience & Certifications</h2>
+      <p class="section-subtitle">Perjalanan dan pencapaian gua</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024</span>
+            <h3><i class="fab fa-aws"></i> AWS Certified Cloud Practitioner</h3>
+            <p>Amazon Web Services</p>
+            <span class="timeline-badge">Certification</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2023 - Sekarang</span>
+            <h3>Cloud Engineer</h3>
+            <p>Mengelola infrastruktur cloud, automasi deployment, dan monitoring sistem di environment AWS.</p>
+            <span class="timeline-badge">Work</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2022</span>
+            <h3>Belajar DevOps & Cloud</h3>
+            <p>Self-learning Docker, Kubernetes, CI/CD pipeline, dan AWS services dari berbagai platform online.</p>
+            <span class="timeline-badge">Learning</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2021</span>
+            <h3>Mulai Coding & IT</h3>
+            <p>Mulai belajar programming, Linux, dan networking sebagai fondasi untuk karir di bidang IT.</p>
+            <span class="timeline-badge">Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section-dark" id="contact">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">Hubungi gua, gua terbuka untuk opportunities!</p>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <h4>GitHub</h4>
+              <a href="https://github.com/Hafidtsh" target="_blank">github.com/Hafidtsh</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <div>
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/hapid-triansyah-9a304520b" target="_blank">hapid-triansyah</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:hapid@example.com">hapid@example.com</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" onsubmit="handleFormSubmit(event)">
+          <input type="text" placeholder="Nama lo" required />
+          <input type="email" placeholder="Email lo" required />
+          <textarea placeholder="Pesan lo..." rows="5" required></textarea>
+          <button type="submit" class="btn-red">Kirim Pesan <i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>© 2024 Hapid Triansyah. Built with ❤️ and lots of ☕</p>
+    </footer>
+
     <script src="scripts.js"></script>
   </body>
 </html>
