@@ -8,6 +8,7 @@
 body {
   background: #0f172a;
   color: #fff;
+  padding-top: 70px;
 }
 
 /* NAVBAR */
@@ -17,8 +18,12 @@ body {
   align-items: center;
   padding: 20px;
   background: #1e293b;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
 }
 
 .logo {
@@ -95,14 +100,45 @@ body {
 }
 
 .btn-red {
-  background: #38bdf8;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
   color: #000;
-  transition: 0.3s;
+  padding: 10px;
+  border-radius: 15%;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+
+.btn-red::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.btn-red:hover::after {
+  width: 200px;
+  height: 200px;
 }
 
 .btn-red:hover {
-  transform: scale(1.05);
-  background: #0ea5e9;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(56, 189, 248, 0.5);
+  background: linear-gradient(135deg, #0ea5e9, #0284c7);
+}
+
+.btn-red:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
 }
 
 .hero-right img {
